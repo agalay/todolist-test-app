@@ -79,7 +79,7 @@ const Day = ({date, tasks, toggleTodo}: TDayProps) => {
 				}
 				<Collapse in={open} timeout="auto" unmountOnExit>
 					<List component="div" disablePadding>
-						{tasks?.length ? tasks.sort((a, b) => +a.done - +b.done).map(task => (
+						{tasks?.length ? tasks.map(task => (
 							<ListElem
 								key={task.title}
 								{...task}
